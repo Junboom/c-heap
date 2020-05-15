@@ -1,0 +1,10 @@
+﻿  cheap.cpp
+  csimplelist.cpp
+  main.cpp
+  코드를 생성하고 있습니다...
+main.obj : error LNK2019: "public: __cdecl CSimpleList<int>::CSimpleList<int>(int)" (??0?$CSimpleList@H@@QEAA@H@Z) 외부 기호(참조 위치: "public: __cdecl CHeap<int>::CHeap<int>(int)" (??0?$CHeap@H@@QEAA@H@Z) 함수)에서 확인하지 못했습니다.
+main.obj : error LNK2019: "public: void __cdecl CSimpleList<int>::DestroyList(void)" (?DestroyList@?$CSimpleList@H@@QEAAXXZ) 외부 기호(참조 위치: "public: virtual __cdecl CSimpleList<int>::~CSimpleList<int>(void)" (??1?$CSimpleList@H@@UEAA@XZ) 함수)에서 확인하지 못했습니다.
+main.obj : error LNK2019: "public: void __cdecl CHeap<int>::DestroyHeap(void)" (?DestroyHeap@?$CHeap@H@@QEAAXXZ) 외부 기호(참조 위치: "public: virtual __cdecl CHeap<int>::~CHeap<int>(void)" (??1?$CHeap@H@@UEAA@XZ) 함수)에서 확인하지 못했습니다.
+main.obj : error LNK2019: "public: void __cdecl CHeap<int>::Insert(int const &)" (?Insert@?$CHeap@H@@QEAAXAEBH@Z) 외부 기호(참조 위치: main 함수)에서 확인하지 못했습니다.
+main.obj : error LNK2019: "public: void __cdecl CHeap<int>::Remove(int &)" (?Remove@?$CHeap@H@@QEAAXAEAH@Z) 외부 기호(참조 위치: main 함수)에서 확인하지 못했습니다.
+C:\Users\JBoom\Documents\Github\c-heap\x64\Debug\c-heap.exe : fatal error LNK1120: 5개의 확인할 수 없는 외부 참조입니다.

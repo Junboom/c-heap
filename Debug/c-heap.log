@@ -1,0 +1,6 @@
+﻿main.obj : error LNK2019: "public: __thiscall CSimpleList<int>::CSimpleList<int>(int)" (??0?$CSimpleList@H@@QAE@H@Z) 외부 기호(참조 위치: "public: __thiscall CHeap<int>::CHeap<int>(int)" (??0?$CHeap@H@@QAE@H@Z) 함수)에서 확인하지 못했습니다.
+main.obj : error LNK2019: "public: void __thiscall CSimpleList<int>::DestroyList(void)" (?DestroyList@?$CSimpleList@H@@QAEXXZ) 외부 기호(참조 위치: "public: virtual __thiscall CSimpleList<int>::~CSimpleList<int>(void)" (??1?$CSimpleList@H@@UAE@XZ) 함수)에서 확인하지 못했습니다.
+main.obj : error LNK2019: "public: void __thiscall CHeap<int>::DestroyHeap(void)" (?DestroyHeap@?$CHeap@H@@QAEXXZ) 외부 기호(참조 위치: "public: virtual __thiscall CHeap<int>::~CHeap<int>(void)" (??1?$CHeap@H@@UAE@XZ) 함수)에서 확인하지 못했습니다.
+main.obj : error LNK2019: "public: void __thiscall CHeap<int>::Insert(int const &)" (?Insert@?$CHeap@H@@QAEXABH@Z) 외부 기호(참조 위치: _main 함수)에서 확인하지 못했습니다.
+main.obj : error LNK2019: "public: void __thiscall CHeap<int>::Remove(int &)" (?Remove@?$CHeap@H@@QAEXAAH@Z) 외부 기호(참조 위치: __catch$_main$0 함수)에서 확인하지 못했습니다.
+C:\Users\JBoom\Documents\c-heap\Debug\c-heap.exe : fatal error LNK1120: 5개의 확인할 수 없는 외부 참조입니다.
