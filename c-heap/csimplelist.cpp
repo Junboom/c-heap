@@ -1,95 +1,120 @@
-template<class CSimpleList, typename ListType>
-class MySimpleList
+template <typename ListType>
+CSimpleList<ListType>::CSimpleList(int numItems)
 {
-	MySimpleList CSimpleList(int numItems)
-	{
-		m_items = new ListType[numItems];
-	}
+    SetListSize(numItems);
+}
 
-	MySimpleList(const MySimpleList& other)
-	{
-		m_items = new ListType[numItems];
-	}
+template <typename ListType>
+CSimpleList<ListType>::CSimpleList(const CSimpleList& other)
+{
+    DestroyList();
+    CopyList(other);
+}
 
-	void DestroyList()
-	{
-		m_currMax = m_numItems = 0;
-		delete[] items;
-	}
+template <typename ListType>
+void CSimpleList<ListType>::DestroyList()
+{
+    m_currMax = m_numItems = 0;
+    delete[] m_items;
+}
 
-	void GetItem(int index, ListType& item) const
-	{
-		item = m_items[index];
-	}
+template <typename ListType>
+void CSimpleList<ListType>::GetItem(int index, ListType& item) const
+{
+    item = m_items[index];
+}
 
-	void Insert(int index, const ListType& item)
-	{
-		if (IsFull())
-		{
-			throw CListEx(L_INVALID_INDEX);
-		}
+template <typename ListType>
+void CSimpleList<ListType>::Insert(int index, const ListType& item)
+{
+    if (IsFull())
+    {
+        throw CListEx(L_INVALID_INDEX);
+    }
 
-		MoveItems(index, MOVE_TOWARDS_BACK);
-		m_items[index] = item;
-		++m_numItems;
-	}
+    MoveItems(index, MOVE_TOWARDS_BACK);
+    m_items[index] = item;
+    ++m_numItems;
+}
 
-	void Remove(int index)
-	{
-		if (IsEmpty())
-		{
-			throw CListEx(L_EMPTY);
-		}
+template <typename ListType>
+void CSimpleList<ListType>::Remove(int index)
+{
+    if (IsEmpty())
+    {
+        throw CListEx(L_EMPTY);
+    }
 
-		MoveItems(index, MOVE_TOWARDS_FRONT);
-		--m_numItems;
-	}
+    MoveItems(index, MOVE_TOWARDS_FRONT);
+    --m_numItems;
+}
 
-	void SetListSize(int numItems)
-	{
-		if (m_numItems < numItems)
-		{
-			m_currMax = m_numItems = numItems;
-		}
-		else
-		{
-			m_numItems = numItems;
-		}
-	}
+template <typename ListType>
+void CSimpleList<ListType>::SetListSize(int numItems)
+{
+    if (m_numItems < numItems)
+    {
+        m_currMax = m_numItems = numItems;
+    }
+    else
+    {
+        m_numItems = numItems;
+    }
 
-	int CopyList(const CSimpleList& other)
-	{
-		for (int index = 0; index < GetNumItems(); ++index)
-		{
-			m_items[index] = other.m_items[index];
-		}
+    m_items = new ListType[numItems];
+}
 
-		return GetNumItems();
-	}
+template <typename ListType>
+CSimpleList<ListType>& CSimpleList<ListType>::operator=(const CSimpleList& rhs)
+{
+    CopyList(rhs);
 
-	int MoveItems(int index, int direction)
-	{
-		int numItemsMoved = 0;
+    return *this;
+}
+template <typename ListType>
+ListType& CSimpleList<ListType>::operator[](int index)
+{
+    ListType* newList = (ListType*)malloc(sizeof(ListType) * index);
 
-		if (direction == MOVE_TOWARDS_BACK)
-		{
-			int numItems = m_currMax == GetNumItems() ? m_currMax - 1 : GetNumItems();
+    return *newList;
+}
 
-			for (int i = numItems; i > index; --i)
-			{
-				m_items[i] = m_items[i - 1];
-				++numItemsMoved;
-			}
-		}
-		else
-		{
-			for (int i = index; i < GetNumItems(); ++i)
-			{
-				m_items[i] = m_items[i + 1];
-				++numItemsMoved;
-			}
-		}
+template <typename ListType>
+int CSimpleList<ListType>::CopyList(const CSimpleList& other)
+{
+    SetListSize(other.GetNumItems());
 
-		return numItemsMoved;
-	}
-};
+    for (int index = 0; index < GetNumItems(); ++index)
+    {
+        m_items[index] = other.m_items[index];
+    }
+
+    return GetNumItems();
+}
+
+template <typename ListType>
+int CSimpleList<ListType>::MoveItems(int index, int direction)
+{
+    int numItemsMoved = 0;
+
+    if (direction == MOVE_TOWARDS_BACK)
+    {
+        int numItems = m_currMax == GetNumItems() ? m_currMax : GetNumItems();
+
+        for (int i = numItems - 1; i > index; --i)
+        {
+            m_items[i] = m_items[i - 1];
+            ++numItemsMoved;
+        }
+    }
+    else
+    {
+        for (int i = index; i < GetNumItems() - 1; ++i)
+        {
+            m_items[i] = m_items[i + 1];
+            ++numItemsMoved;
+        }
+    }
+
+    return numItemsMoved;
+}

@@ -1,90 +1,55 @@
 ﻿  cheap.cpp
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(60): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-  c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(95): note: 컴파일 중인 클래스 템플릿 인스턴스화 'MySimpleList<CSimpleList,ListType>'에 대한 참조를 확인하세요.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(60): error C2143: 구문 오류: ','이(가) '&' 앞에 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(6): error C3861: 'm_items': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(11): error C3861: 'm_items': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(11): error C3861: 'numItems': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(16): error C3861: 'm_currMax': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(16): error C3861: 'm_numItems': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(17): error C3861: 'items': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(22): error C3861: 'm_items': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(27): error C2065: 'IsFull': 선언되지 않은 식별자입니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(27): error C3861: 'IsFull': 식별자를 찾을 수 없습니다.
-  c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(27): note: 'IsFull': 인수가 템플릿 매개 변수에 종속되지 않으므로 함수 선언을 사용할 수 있어야 합니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(33): error C3861: 'm_items': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(34): error C3861: 'm_numItems': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(39): error C2065: 'IsEmpty': 선언되지 않은 식별자입니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(39): error C3861: 'IsEmpty': 식별자를 찾을 수 없습니다.
-  c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(39): note: 'IsEmpty': 인수가 템플릿 매개 변수에 종속되지 않으므로 함수 선언을 사용할 수 있어야 합니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(45): error C3861: 'm_numItems': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(50): error C3861: 'm_numItems': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(52): error C3861: 'm_currMax': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(52): error C3861: 'm_numItems': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(56): error C3861: 'm_numItems': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(62): error C2065: 'GetNumItems': 선언되지 않은 식별자입니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(62): error C3861: 'GetNumItems': 식별자를 찾을 수 없습니다.
-  c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(62): note: 'GetNumItems': 인수가 템플릿 매개 변수에 종속되지 않으므로 함수 선언을 사용할 수 있어야 합니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(64): error C3861: 'm_items': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(64): error C3861: 'other': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(67): error C2065: 'GetNumItems': 선언되지 않은 식별자입니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(67): error C3861: 'GetNumItems': 식별자를 찾을 수 없습니다.
-  c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(67): note: 'GetNumItems': 인수가 템플릿 매개 변수에 종속되지 않으므로 함수 선언을 사용할 수 있어야 합니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(76): error C3861: 'm_currMax': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(76): error C2065: 'GetNumItems': 선언되지 않은 식별자입니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(76): error C3861: 'GetNumItems': 식별자를 찾을 수 없습니다.
-  c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(76): note: 'GetNumItems': 인수가 템플릿 매개 변수에 종속되지 않으므로 함수 선언을 사용할 수 있어야 합니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(80): error C3861: 'm_items': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(86): error C2065: 'GetNumItems': 선언되지 않은 식별자입니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(86): error C3861: 'GetNumItems': 식별자를 찾을 수 없습니다.
-  c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(86): note: 'GetNumItems': 인수가 템플릿 매개 변수에 종속되지 않으므로 함수 선언을 사용할 수 있어야 합니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(88): error C3861: 'm_items': 식별자를 찾을 수 없습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(2): error C2988: 템플릿 선언/정의를 인식할 수 없습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(2): error C2143: 구문 오류: ';'이(가) '<' 앞에 없습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(2): error C2182: 'CHeap': 'void' 형식을 잘못 사용했습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(2): error C2059: 구문 오류: '<'
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(2): error C2039: 'DestroyHeap': '`global namespace''의 멤버가 아닙니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(3): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(3): error C2447: '{': 함수 헤더가 없습니다. 이전 스타일의 형식 목록입니까?
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(8): error C2988: 템플릿 선언/정의를 인식할 수 없습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(8): error C2143: 구문 오류: ';'이(가) '<' 앞에 없습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(8): error C2182: 'CHeap': 'void' 형식을 잘못 사용했습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(8): error C2374: 'CHeap': 재정의. 여러 번 초기화했습니다.
+  c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(2): note: 'CHeap' 선언을 참조하십시오.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(8): error C2059: 구문 오류: '<'
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(8): error C2039: 'Insert': '`global namespace''의 멤버가 아닙니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(9): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(9): error C2447: '{': 함수 헤더가 없습니다. 이전 스타일의 형식 목록입니까?
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(33): error C2988: 템플릿 선언/정의를 인식할 수 없습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(33): error C2143: 구문 오류: ';'이(가) '<' 앞에 없습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(33): error C2182: 'CHeap': 'void' 형식을 잘못 사용했습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(33): error C2374: 'CHeap': 재정의. 여러 번 초기화했습니다.
+  c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(2): note: 'CHeap' 선언을 참조하십시오.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(33): error C2059: 구문 오류: '<'
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(33): error C2039: 'PeekTop': '`global namespace''의 멤버가 아닙니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(34): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(34): error C2447: '{': 함수 헤더가 없습니다. 이전 스타일의 형식 목록입니까?
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(39): error C2988: 템플릿 선언/정의를 인식할 수 없습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(39): error C2143: 구문 오류: ';'이(가) '<' 앞에 없습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(39): error C2182: 'CHeap': 'void' 형식을 잘못 사용했습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(39): error C2374: 'CHeap': 재정의. 여러 번 초기화했습니다.
+  c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(2): note: 'CHeap' 선언을 참조하십시오.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(39): error C2059: 구문 오류: '<'
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(39): error C2039: 'Remove': '`global namespace''의 멤버가 아닙니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(40): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(40): error C2447: '{': 함수 헤더가 없습니다. 이전 스타일의 형식 목록입니까?
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(48): error C2988: 템플릿 선언/정의를 인식할 수 없습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(48): error C2143: 구문 오류: ';'이(가) '<' 앞에 없습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(48): error C2182: 'CHeap': 'void' 형식을 잘못 사용했습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(48): error C2374: 'CHeap': 재정의. 여러 번 초기화했습니다.
+  c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(2): note: 'CHeap' 선언을 참조하십시오.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(48): error C2059: 구문 오류: '<'
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(48): error C2039: 'RebuildHeap': '`global namespace''의 멤버가 아닙니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(49): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\cheap.cpp(49): error C2447: '{': 함수 헤더가 없습니다. 이전 스타일의 형식 목록입니까?
   csimplelist.cpp
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(60): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-  c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(95): note: 컴파일 중인 클래스 템플릿 인스턴스화 'MySimpleList<CSimpleList,ListType>'에 대한 참조를 확인하세요.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(60): error C2143: 구문 오류: ','이(가) '&' 앞에 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(6): error C3861: 'm_items': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(11): error C3861: 'm_items': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(11): error C3861: 'numItems': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(16): error C3861: 'm_currMax': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(16): error C3861: 'm_numItems': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(17): error C3861: 'items': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(22): error C3861: 'm_items': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(27): error C2065: 'IsFull': 선언되지 않은 식별자입니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(27): error C3861: 'IsFull': 식별자를 찾을 수 없습니다.
-  c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(27): note: 'IsFull': 인수가 템플릿 매개 변수에 종속되지 않으므로 함수 선언을 사용할 수 있어야 합니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(29): error C3861: 'L_INVALID_INDEX': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(32): error C3861: 'MOVE_TOWARDS_BACK': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(33): error C3861: 'm_items': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(34): error C3861: 'm_numItems': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(39): error C2065: 'IsEmpty': 선언되지 않은 식별자입니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(39): error C3861: 'IsEmpty': 식별자를 찾을 수 없습니다.
-  c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(39): note: 'IsEmpty': 인수가 템플릿 매개 변수에 종속되지 않으므로 함수 선언을 사용할 수 있어야 합니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(41): error C3861: 'L_EMPTY': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(44): error C3861: 'MOVE_TOWARDS_FRONT': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(45): error C3861: 'm_numItems': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(50): error C3861: 'm_numItems': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(52): error C3861: 'm_currMax': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(52): error C3861: 'm_numItems': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(56): error C3861: 'm_numItems': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(62): error C2065: 'GetNumItems': 선언되지 않은 식별자입니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(62): error C3861: 'GetNumItems': 식별자를 찾을 수 없습니다.
-  c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(62): note: 'GetNumItems': 인수가 템플릿 매개 변수에 종속되지 않으므로 함수 선언을 사용할 수 있어야 합니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(64): error C3861: 'm_items': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(64): error C3861: 'other': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(67): error C2065: 'GetNumItems': 선언되지 않은 식별자입니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(67): error C3861: 'GetNumItems': 식별자를 찾을 수 없습니다.
-  c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(67): note: 'GetNumItems': 인수가 템플릿 매개 변수에 종속되지 않으므로 함수 선언을 사용할 수 있어야 합니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(74): error C3861: 'MOVE_TOWARDS_BACK': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(76): error C3861: 'm_currMax': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(76): error C2065: 'GetNumItems': 선언되지 않은 식별자입니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(76): error C3861: 'GetNumItems': 식별자를 찾을 수 없습니다.
-  c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(76): note: 'GetNumItems': 인수가 템플릿 매개 변수에 종속되지 않으므로 함수 선언을 사용할 수 있어야 합니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(80): error C3861: 'm_items': 식별자를 찾을 수 없습니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(86): error C2065: 'GetNumItems': 선언되지 않은 식별자입니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(86): error C3861: 'GetNumItems': 식별자를 찾을 수 없습니다.
-  c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(86): note: 'GetNumItems': 인수가 템플릿 매개 변수에 종속되지 않으므로 함수 선언을 사용할 수 있어야 합니다.
-c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(88): error C3861: 'm_items': 식별자를 찾을 수 없습니다.
-  main.cpp
-c:\program files (x86)\microsoft visual studio\2017\buildtools\vc\tools\msvc\14.16.27023\include\crtdefs.h(10): fatal error C1083: 포함 파일을 열 수 없습니다. 'corecrt.h': No such file or directory
-  코드를 생성하고 있습니다...
+c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(2): error C2988: 템플릿 선언/정의를 인식할 수 없습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(2): error C2143: 구문 오류: ';'이(가) '<' 앞에 없습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(2): error C2059: 구문 오류: '<'
+c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(2): error C2039: 'CSimpleList': '`global namespace''의 멤버가 아닙니다.
+c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(3): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(3): error C2447: '{': 함수 헤더가 없습니다. 이전 스타일의 형식 목록입니까?
+c:\users\jboom\documents\github\c-heap\c-heap\csimplelist.cpp(9): fatal error C1903: 이전 오류를 복구할 수 없습니다. 컴파일이 중지됩니다.
+  'C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\CL.exe'에서 내부 컴파일러 오류
+      자세한 내용을 보려면 Visual C++ [도움말] 메뉴에서
+   [기술 지원] 명령을 선택하거나 기술 지원 도움말 파일을 참조하십시오.
