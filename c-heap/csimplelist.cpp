@@ -14,8 +14,8 @@ CSimpleList<ListType>::CSimpleList(const CSimpleList& other)
 template <typename ListType>
 void CSimpleList<ListType>::DestroyList()
 {
+    m_items = NULL;
     m_currMax = m_numItems = 0;
-    delete[] m_items;
 }
 
 template <typename ListType>
@@ -52,31 +52,20 @@ void CSimpleList<ListType>::Remove(int index)
 template <typename ListType>
 void CSimpleList<ListType>::SetListSize(int numItems)
 {
-    if (m_numItems < numItems)
-    {
-        m_currMax = m_numItems = numItems;
-    }
-    else
-    {
-        m_numItems = numItems;
-    }
-
-    m_items = new ListType[numItems];
+    m_currMax = m_currMax < numItems ? numItems : m_currMax;
+    m_items = new ListType[m_currMax];
 }
 
 template <typename ListType>
 CSimpleList<ListType>& CSimpleList<ListType>::operator=(const CSimpleList& rhs)
 {
     CopyList(rhs);
-
     return *this;
 }
 template <typename ListType>
 ListType& CSimpleList<ListType>::operator[](int index)
 {
-    ListType* newList = (ListType*)malloc(sizeof(ListType) * index);
-
-    return *newList;
+    return m_items[index];
 }
 
 template <typename ListType>
@@ -99,9 +88,7 @@ int CSimpleList<ListType>::MoveItems(int index, int direction)
 
     if (direction == MOVE_TOWARDS_BACK)
     {
-        int numItems = m_currMax == GetNumItems() ? m_currMax : GetNumItems();
-
-        for (int i = numItems - 1; i > index; --i)
+        for (int i = m_currMax - 1; i > index; --i)
         {
             m_items[i] = m_items[i - 1];
             ++numItemsMoved;
@@ -109,9 +96,9 @@ int CSimpleList<ListType>::MoveItems(int index, int direction)
     }
     else
     {
-        for (int i = index; i < GetNumItems() - 1; ++i)
+        for (int i = index + 1; i < m_currMax - 1; ++i)
         {
-            m_items[i] = m_items[i + 1];
+            m_items[i - 1] = m_items[i];
             ++numItemsMoved;
         }
     }

@@ -11,22 +11,26 @@ void CHeap<HeapType>::Insert(const HeapType& item)
     {
         throw CHeapEx(H_FULL);
     }
-    int child = CSimpleList<HeapType>::GetNumItems();
-    int parent = (child - 1) / 2;
-    HeapType value = 0;
 
-    while (0 < child)
+    int index = CSimpleList<HeapType>::GetNumItems();
+    CSimpleList<HeapType>::Insert(index, item);
+
+    int parentIndex = (index - 1) / 2;
+    HeapType parentItem = 0;
+    CSimpleList<HeapType>::GetItem(parentIndex, parentItem);
+
+    while (0 < index && parentItem < item)
     {
-        CSimpleList<HeapType>::GetItem(parent, value);
-        if (item <= value)
-        {
-            break;
-        }
-        child = parent;
-        parent = (parent - 1) / 2;
+        CSimpleList<HeapType>::Remove(parentIndex);
+        CSimpleList<HeapType>::Insert(parentIndex, item);
+        CSimpleList<HeapType>::Remove(index);
+        CSimpleList<HeapType>::Insert(index, parentItem);
+
+        parentIndex = ((index = parentIndex) - 1) / 2;
+        CSimpleList<HeapType>::GetItem(parentIndex, parentItem);
     }
 
-    CSimpleList<HeapType>::Insert(child, item);
+    cout << "insertIndex: " << index << " item: " << item << endl;
 }
 
 template <typename HeapType>
@@ -38,66 +42,66 @@ void CHeap<HeapType>::PeekTop(HeapType& item) const
 template <typename HeapType>
 void CHeap<HeapType>::Remove(HeapType& item)
 {
-    CSimpleList<HeapType>::GetItem(0, item);
+    if (CSimpleList<HeapType>::IsEmpty())
+    {
+        throw CHeapEx(H_EMPTY);
+    }
 
-    RebuildHeap(0);
+    int rootIndex = 0;
+    CSimpleList<HeapType>::GetItem(rootIndex, item);
+
+    int lastIndex = CSimpleList<HeapType>::GetNumItems() - 1;
+    HeapType lastItem = 0;
+    CSimpleList<HeapType>::GetItem(lastIndex, lastItem);
+    CSimpleList<HeapType>::Remove(lastIndex);
+
+    CSimpleList<HeapType>::Remove(rootIndex);
+    CSimpleList<HeapType>::Insert(rootIndex, lastItem);
+
+    RebuildHeap(rootIndex);
 }
 
 template <typename HeapType>
 void CHeap<HeapType>::RebuildHeap(int rootIndex)
 {
-    int lastChildIndex = CSimpleList<HeapType>::GetNumItems();
-    if (lastChildIndex-- == rootIndex)
-    {
-        throw CHeapEx(H_EMPTY);
-    }
-    HeapType lastChild = 0;
-    CSimpleList<HeapType>::GetItem(lastChildIndex, lastChild);
+    HeapType rootItem = 0;
+    CSimpleList<HeapType>::GetItem(rootIndex, rootItem);
 
-    while (rootIndex < lastChildIndex)
+    int numItems = CSimpleList<HeapType>::GetNumItems();
+
+    while (rootIndex < numItems)
     {
-        int left = rootIndex * 2 + 1;
+        int leftIndex = rootIndex * 2 + 1;
         HeapType leftItem = 0;
-        CSimpleList<HeapType>::GetItem(left, leftItem);
+        CSimpleList<HeapType>::GetItem(leftIndex, leftItem);
 
-        int right = rootIndex * 2 + 2;
+        int rightIndex = rootIndex * 2 + 2;
         HeapType rightItem = 0;
-        CSimpleList<HeapType>::GetItem(right, rightItem);
+        CSimpleList<HeapType>::GetItem(rightIndex, rightItem);
 
         int maxIndex = 0;
-        int maxItem = 0;
-        int minIndex = 0;
-        int minItem = 0;
+        HeapType maxItem = 0;
         if (leftItem < rightItem)
         {
-            maxIndex = right;
+            maxIndex = rightIndex;
             maxItem = rightItem;
-            minIndex = left;
-            minItem = leftItem;
         }
         else
         {
-            maxIndex = left;
+            maxIndex = leftIndex;
             maxItem = leftItem;
-            minIndex = right;
-            minItem = rightItem;
         }
 
-        if (lastChild < maxItem)
-        {
-            rootIndex = maxIndex;
-        }
-        else if (lastChild < minItem)
-        {
-            rootIndex = minIndex;
-        }
-        else
+        if (maxItem <= rootItem)
         {
             break;
         }
-    }
 
-    CSimpleList<HeapType>::Insert(rootIndex, lastChild);
-    CSimpleList<HeapType>::Remove(0);
-    CSimpleList<HeapType>::Remove(lastChildIndex);
+        CSimpleList<HeapType>::Remove(rootIndex);
+        CSimpleList<HeapType>::Insert(rootIndex, maxItem);
+        CSimpleList<HeapType>::Remove(maxIndex);
+        CSimpleList<HeapType>::Insert(maxIndex, rootItem);
+
+        rootIndex = maxIndex;
+    }
 }
