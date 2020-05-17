@@ -7,7 +7,7 @@ CSimpleList<ListType>::CSimpleList(int numItems)
 template <typename ListType>
 CSimpleList<ListType>::CSimpleList(const CSimpleList& other)
 {
-    DestroyList();
+    SetListSize(other.m_currMax);
     CopyList(other);
 }
 
@@ -15,6 +15,7 @@ template <typename ListType>
 void CSimpleList<ListType>::DestroyList()
 {
     m_items = NULL;
+    delete[] m_items;
     m_currMax = m_numItems = 0;
 }
 
@@ -29,12 +30,35 @@ void CSimpleList<ListType>::Insert(int index, const ListType& item)
 {
     if (IsFull())
     {
-        throw CListEx(L_INVALID_INDEX);
+        throw CListEx(L_FULL);
     }
 
     MoveItems(index, MOVE_TOWARDS_BACK);
     m_items[index] = item;
     ++m_numItems;
+
+    if (IsFull())
+    {
+        int index;
+        int currMax = m_currMax + DEFAULT_NUM_ITEMS;
+        int numItems = GetNumItems();
+        ListType* items = new ListType[currMax];
+
+        for (index = 0; index < numItems; ++index)
+        {
+            items[index] = m_items[index];
+        }
+
+        SetListSize(currMax);
+        m_numItems = numItems;
+        for (index = 0; index < numItems; ++index)
+        {
+            m_items[index] = items[index];
+        }
+
+        items = NULL;
+        delete[] items;
+    }
 }
 
 template <typename ListType>
@@ -52,8 +76,9 @@ void CSimpleList<ListType>::Remove(int index)
 template <typename ListType>
 void CSimpleList<ListType>::SetListSize(int numItems)
 {
-    m_currMax = m_currMax < numItems ? numItems : m_currMax;
-    m_items = new ListType[m_currMax];
+    m_currMax = numItems;
+    m_numItems = 0;
+    m_items = new ListType[numItems];
 }
 
 template <typename ListType>
@@ -62,6 +87,7 @@ CSimpleList<ListType>& CSimpleList<ListType>::operator=(const CSimpleList& rhs)
     CopyList(rhs);
     return *this;
 }
+
 template <typename ListType>
 ListType& CSimpleList<ListType>::operator[](int index)
 {
@@ -71,7 +97,7 @@ ListType& CSimpleList<ListType>::operator[](int index)
 template <typename ListType>
 int CSimpleList<ListType>::CopyList(const CSimpleList& other)
 {
-    SetListSize(other.GetNumItems());
+    m_numItems = other.GetNumItems();
 
     for (int index = 0; index < GetNumItems(); ++index)
     {

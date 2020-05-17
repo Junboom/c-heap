@@ -29,8 +29,6 @@ void CHeap<HeapType>::Insert(const HeapType& item)
         parentIndex = ((index = parentIndex) - 1) / 2;
         CSimpleList<HeapType>::GetItem(parentIndex, parentItem);
     }
-
-    cout << "insertIndex: " << index << " item: " << item << endl;
 }
 
 template <typename HeapType>
@@ -51,6 +49,12 @@ void CHeap<HeapType>::Remove(HeapType& item)
     CSimpleList<HeapType>::GetItem(rootIndex, item);
 
     int lastIndex = CSimpleList<HeapType>::GetNumItems() - 1;
+    if (lastIndex == rootIndex)
+    {
+        CSimpleList<HeapType>::Remove(lastIndex);
+        return;
+    }
+
     HeapType lastItem = 0;
     CSimpleList<HeapType>::GetItem(lastIndex, lastItem);
     CSimpleList<HeapType>::Remove(lastIndex);
