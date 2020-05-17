@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 template <typename HeapType>
 void CHeap<HeapType>::DestroyHeap()
 {
@@ -101,29 +100,4 @@ void CHeap<HeapType>::RebuildHeap(int rootIndex)
     CSimpleList<HeapType>::Insert(rootIndex, lastChild);
     CSimpleList<HeapType>::Remove(0);
     CSimpleList<HeapType>::Remove(lastChildIndex);
-=======
-void CHeap<int>::DestroyHeap()
-{
-  DestroyList();
-}
-
-void CHeap<int>::Insert(const int& item);
-{
-  Insert(item);
-}
-
-void CHeap<int>::PeekTop(int& item) const;
-{
-  GetItem(item);
-}
-
-void CHeap<int>::Remove(int& item);
-{
-  Remove(item);
-}
-
-void CHeap<int>::RebuildHeap(int rootIndex);
-{
-  SetListSize(rootIndex);
->>>>>>> 47efee91b32917244e18f589ef30fa17a730ed5f
 }
